@@ -4,6 +4,7 @@
 class Sprite2D;
 class Sprite3D;
 class Text;
+class Animation2D;
 
 class GSPlay :
 	public GameStateBase
@@ -32,6 +33,6 @@ private:
 
 	std::shared_ptr<Sprite2D> m_BackGround;
 	std::shared_ptr<Text>  m_score;
-
+	std::list<std::shared_ptr<Animation2D>> m_Animation;
 };
 

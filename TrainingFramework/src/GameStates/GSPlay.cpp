@@ -8,6 +8,7 @@
 #include "Sprite2D.h"
 #include "Sprite3D.h"
 #include "Text.h"
+#include "Animation2D.h"
 
 extern int screenWidth; //need get on Graphic engine
 extern int screenHeight; //need get on Graphic engine
@@ -34,6 +35,19 @@ void GSPlay::Init()
 	m_BackGround->Set2DPosition(screenWidth / 2, screenHeight / 2);
 	m_BackGround->SetSize(screenWidth, screenHeight);
 
+	//Player
+	texture = ResourceManagers::GetInstance()->GetTexture("Stand");
+	std::shared_ptr<Animation2D> Player = std::make_shared<Animation2D>(model, shader, texture);
+	Player->Set2DPosition(screenWidth / 2, screenHeight / 2);
+	Player->SetSize(100, 100);
+	m_Animation.push_back(Player);
+
+	//Coin
+	texture = ResourceManagers::GetInstance()->GetTexture("Coin");
+	Player = std::make_shared<Animation2D>(model, shader, texture);
+	Player->Set2DPosition(screenWidth / 2, screenHeight / 2 - 200);
+	Player->SetSize(100, 100);
+	m_Animation.push_back(Player);
 
 	//text game title
 	shader = ResourceManagers::GetInstance()->GetShader("TextShader");
@@ -75,12 +89,21 @@ void GSPlay::HandleTouchEvents(int x, int y, bool bIsPressed)
 
 void GSPlay::Update(float deltaTime)
 {
+	m_BackGround->Update(deltaTime);
+	for (auto it : m_Animation)
+	{
+		it->Update(deltaTime);
+	}
 }
 
 void GSPlay::Draw()
 {
 	m_BackGround->Draw();
 	m_score->Draw();
+	for (auto it : m_Animation)
+	{
+		it->Draw();
+	}
 }
 
 void GSPlay::SetNewPostionForBullet()
