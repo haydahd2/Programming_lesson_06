@@ -18,7 +18,7 @@ GSMenu::~GSMenu()
 void GSMenu::Init()
 {
 	auto model = ResourceManagers::GetInstance()->GetModel("Sprite2D");
-	auto texture = ResourceManagers::GetInstance()->GetTexture("bg_main_menu(new)");
+	auto texture = ResourceManagers::GetInstance()->GetTexture("bg_main");
 
 	//BackGround
 	auto shader = ResourceManagers::GetInstance()->GetShader("TextureShader");
@@ -29,31 +29,17 @@ void GSMenu::Init()
 	//play button
 	texture = ResourceManagers::GetInstance()->GetTexture("button_start(new)");
 	std::shared_ptr<GameButton> button = std::make_shared<GameButton>(model, shader, texture);
-	button->Set2DPosition(screenWidth / 2, 200);
+	button->Set2DPosition(screenWidth / 2, 300);
 	button->SetSize(200, 50);
 	button->SetOnClick([]() {
 		GameStateMachine::GetInstance()->ChangeState(StateTypes::STATE_Play);
 		});
 	m_listButton.push_back(button);
 
-	//setting button
-	texture = ResourceManagers::GetInstance()->GetTexture("button_setting");
-	button = std::make_shared<GameButton>(model, shader, texture);
-	button->Set2DPosition(screenWidth / 2 + 200, 600);
-	button->SetSize(50, 50);
-	m_listButton.push_back(button);
-
-	//credit button
-	texture = ResourceManagers::GetInstance()->GetTexture("button_credit");
-	button = std::make_shared<GameButton>(model, shader, texture);
-	button->Set2DPosition(screenWidth / 2 + 200, 670);
-	button->SetSize(50, 50);
-	m_listButton.push_back(button);
-
 	//exit button
 	texture = ResourceManagers::GetInstance()->GetTexture("button_exit(new)");
 	button = std::make_shared<GameButton>(model, shader, texture);
-	button->Set2DPosition(screenWidth / 2, 300);
+	button->Set2DPosition(screenWidth / 2, 500);
 	button->SetSize(200, 50);
 	button->SetOnClick([]() {
 		exit(0);
@@ -63,9 +49,9 @@ void GSMenu::Init()
 
 	//text game title
 	shader = ResourceManagers::GetInstance()->GetShader("TextShader");
-	std::shared_ptr<Font> font = ResourceManagers::GetInstance()->GetFont("arialbd");
-	m_Text_gameName = std::make_shared< Text>(shader, font, "SAMPLE NAME", TEXT_COLOR::GREEN, 1.0);
-	m_Text_gameName->Set2DPosition(Vector2(screenWidth / 2 - 80, 120));
+	std::shared_ptr<Font> font = ResourceManagers::GetInstance()->GetFont("times");
+	m_Text_gameName = std::make_shared< Text>(shader, font, "MEGAMAN RUN", TEXT_COLOR::GREEN, 2.0);
+	m_Text_gameName->Set2DPosition(Vector2(screenWidth / 2 - 170, 120));
 }
 
 void GSMenu::Exit()

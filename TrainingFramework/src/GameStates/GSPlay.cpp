@@ -27,27 +27,25 @@ GSPlay::~GSPlay()
 void GSPlay::Init()
 {
 	auto model = ResourceManagers::GetInstance()->GetModel("Sprite2D");
-	auto texture = ResourceManagers::GetInstance()->GetTexture("bg_play");
+	auto shader = ResourceManagers::GetInstance()->GetShader("TextureShader");
+	auto shader2 = ResourceManagers::GetInstance()->GetShader("AnimationShader");
 
 	//BackGround
-	auto shader = ResourceManagers::GetInstance()->GetShader("TextureShader");
+	auto texture = ResourceManagers::GetInstance()->GetTexture("bg_play");
 	m_BackGround = std::make_shared<Sprite2D>(model, shader, texture);
 	m_BackGround->Set2DPosition(screenWidth / 2, screenHeight / 2);
 	m_BackGround->SetSize(screenWidth, screenHeight);
 
-	//Player
-	texture = ResourceManagers::GetInstance()->GetTexture("Stand");
-	std::shared_ptr<Animation2D> Player = std::make_shared<Animation2D>(model, shader, texture);
-	Player->Set2DPosition(screenWidth / 2, screenHeight / 2);
+
+	//run
+	auto numFrames = 3;
+	auto frameTime = 0.15;
+	texture = ResourceManagers::GetInstance()->GetTexture("run");
+	std::shared_ptr<Animation2D> Player = std::make_shared<Animation2D>(model, shader2, texture, numFrames, frameTime);
+	Player->Set2DPosition(screenWidth / 2 - 470, screenHeight / 2 + 255);
 	Player->SetSize(100, 100);
 	m_Animation.push_back(Player);
 
-	//Coin
-	texture = ResourceManagers::GetInstance()->GetTexture("Coin");
-	Player = std::make_shared<Animation2D>(model, shader, texture);
-	Player->Set2DPosition(screenWidth / 2, screenHeight / 2 - 200);
-	Player->SetSize(100, 100);
-	m_Animation.push_back(Player);
 
 	//text game title
 	shader = ResourceManagers::GetInstance()->GetShader("TextShader");

@@ -1,28 +1,23 @@
 ﻿cl : Command line warning D9035: option 'Gm' has been deprecated and will be removed in a future release
-  GSPlay.cpp
-d:\study\thuctap\programming_lesson_06\trainingframework\src\gamestates\gsplay.cpp(35): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
-d:\study\thuctap\programming_lesson_06\trainingframework\src\gamestates\gsplay.cpp(41): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
-d:\study\thuctap\programming_lesson_06\trainingframework\src\gamestates\gsplay.cpp(48): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+  GSMenu.cpp
+d:\study\thuctap\programming_lesson_06\trainingframework\src\gamestates\gsmenu.cpp(26): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+d:\study\thuctap\programming_lesson_06\trainingframework\src\gamestates\gsmenu.cpp(32): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+d:\study\thuctap\programming_lesson_06\trainingframework\src\gamestates\gsmenu.cpp(42): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+d:\study\thuctap\programming_lesson_06\trainingframework\src\gamestates\gsmenu.cpp(54): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
 c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\memory(1801): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
           with
           [
               _Ty=double
           ]
-  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\memory(1866): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<std::shared_ptr<Shaders>&,std::shared_ptr<Font>&,const char(&)[10],TEXT_COLOR,double>(std::shared_ptr<Shaders> &,std::shared_ptr<Font> &,const char (&)[10],TEXT_COLOR &&,double &&)' being compiled
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\memory(1866): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<std::shared_ptr<Shaders>&,std::shared_ptr<Font>&,const char(&)[12],TEXT_COLOR,double>(std::shared_ptr<Shaders> &,std::shared_ptr<Font> &,const char (&)[12],TEXT_COLOR &&,double &&)' being compiled
           with
           [
               _Ty=Text
           ]
-  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\memory(1866): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<std::shared_ptr<Shaders>&,std::shared_ptr<Font>&,const char(&)[10],TEXT_COLOR,double>(std::shared_ptr<Shaders> &,std::shared_ptr<Font> &,const char (&)[10],TEXT_COLOR &&,double &&)' being compiled
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\memory(1866): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<std::shared_ptr<Shaders>&,std::shared_ptr<Font>&,const char(&)[12],TEXT_COLOR,double>(std::shared_ptr<Shaders> &,std::shared_ptr<Font> &,const char (&)[12],TEXT_COLOR &&,double &&)' being compiled
           with
           [
               _Ty=Text
           ]
-  d:\study\thuctap\programming_lesson_06\trainingframework\src\gamestates\gsplay.cpp(55): note: see reference to function template instantiation 'std::shared_ptr<Text> std::make_shared<Text,std::shared_ptr<Shaders>&,std::shared_ptr<Font>&,const char(&)[10],TEXT_COLOR,double>(std::shared_ptr<Shaders> &,std::shared_ptr<Font> &,const char (&)[10],TEXT_COLOR &&,double &&)' being compiled
-  Animation2D.cpp
-d:\study\thuctap\programming_lesson_06\trainingframework\src\gameobject\animation2d.cpp(164): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-d:\study\thuctap\programming_lesson_06\trainingframework\src\gameobject\animation2d.cpp(165): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-d:\study\thuctap\programming_lesson_06\trainingframework\src\gameobject\animation2d.cpp(175): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-d:\study\thuctap\programming_lesson_06\trainingframework\src\gameobject\animation2d.cpp(176): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  Generating Code...
+  d:\study\thuctap\programming_lesson_06\trainingframework\src\gamestates\gsmenu.cpp(53): note: see reference to function template instantiation 'std::shared_ptr<Text> std::make_shared<Text,std::shared_ptr<Shaders>&,std::shared_ptr<Font>&,const char(&)[12],TEXT_COLOR,double>(std::shared_ptr<Shaders> &,std::shared_ptr<Font> &,const char (&)[12],TEXT_COLOR &&,double &&)' being compiled
   TrainingFramework.vcxproj -> D:\study\ThucTap\Programming_lesson_06\\BIN-Nvidia\TrainingFramework.exe

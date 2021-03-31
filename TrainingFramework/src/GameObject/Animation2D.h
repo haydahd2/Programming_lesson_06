@@ -10,14 +10,12 @@ protected:
 	Vector2			m_Vec2DPos;
 	GLint			m_iHeight;
 	GLint			m_iWidth;
-	float			u_numFrames;
-	float			u_currentFrame;
-	float			m_currentTime;
-	float			m_frameTime;
+	GLfloat			m_numFrames;
+	GLfloat			m_currentFrame;
+	GLfloat			m_currentTime;
+	GLfloat			m_frameTime;
 public:
-	Animation2D() {};
-	Animation2D(std::shared_ptr<Models> model, std::shared_ptr<Shaders> shader, std::shared_ptr<Texture> texture);
-	Animation2D(std::shared_ptr<Models> model, std::shared_ptr<Shaders> shader, Vector4 color);
+	Animation2D(std::shared_ptr<Models> model, std::shared_ptr<Shaders> shader, std::shared_ptr<Texture> texture, GLfloat numFrames, GLfloat frameTime);
 	~Animation2D();
 
 	void		Init() override;
@@ -33,5 +31,8 @@ public:
 
 	Vector2		Get2DPosition();
 	void		SetSize(GLint width, GLint height);
+
+	void SetNumFrames(GLint numFrames);
+	void SetFrameTime(GLfloat frameTime);
 };
 

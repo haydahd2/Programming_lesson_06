@@ -15,28 +15,17 @@ void Animation2D::CaculateWorldMatrix()
 	m_WorldMat = m_Sc * m_T;
 }
 
-Animation2D::Animation2D(std::shared_ptr<Models> model, std::shared_ptr<Shaders> shader, std::shared_ptr<Texture> texture)
+Animation2D::Animation2D(std::shared_ptr<Models> model, std::shared_ptr<Shaders> shader, std::shared_ptr<Texture> texture, GLfloat numFrames, GLfloat frameTime)
 	: BaseObject()
 {
 	m_pModel = model;
 	m_pShader = shader;
 	m_pCamera = nullptr;
 	m_pTexture = texture;
-
-	m_Vec3Position = Vector3(0, 0, 0);
-	m_iHeight = 50;
-	m_iWidth = 100;
-	m_Vec3Scale = Vector3((float)m_iWidth / screenWidth, (float)m_iHeight / screenHeight, 1);
-}
-
-Animation2D::Animation2D(std::shared_ptr<Models> model, std::shared_ptr<Shaders> shader, Vector4 color)
-	: BaseObject()
-{
-	m_pModel = model;
-	m_pShader = shader;
-	m_pCamera = nullptr;
-	m_pTexture = nullptr;
-	m_Color = color;
+	m_numFrames = numFrames;
+	m_frameTime = frameTime;
+	m_currentFrame = 0;
+	m_currentTime = 0.0f;
 
 	m_Vec3Position = Vector3(0, 0, 0);
 	m_iHeight = 50;
@@ -105,24 +94,12 @@ void Animation2D::Draw()
 	iTempShaderVaribleGLID = -1;
 	iTempShaderVaribleGLID = m_pShader->GetUniformLocation((char*)"u_numFrames");
 	if (iTempShaderVaribleGLID != -1)
-		glUniform1f(iTempShaderVaribleGLID, 1.0);
-
-	iTempShaderVaribleGLID = -1;
-	iTempShaderVaribleGLID = m_pShader->GetUniformLocation((char*)"u_currentTime");
-	if (iTempShaderVaribleGLID != -1)
-		glUniform1f(iTempShaderVaribleGLID, 1.0);
-
-	iTempShaderVaribleGLID = -1;
-	iTempShaderVaribleGLID = m_pShader->GetUniformLocation((char*)"u_frameTime");
-	if (iTempShaderVaribleGLID != -1)
-		glUniform1f(iTempShaderVaribleGLID, 1.0);
+		glUniform1f(iTempShaderVaribleGLID, m_numFrames);
 
 	iTempShaderVaribleGLID = -1;
 	iTempShaderVaribleGLID = m_pShader->GetUniformLocation((char*)"u_currentFrame");
 	if (iTempShaderVaribleGLID != -1)
-		glUniform1f(iTempShaderVaribleGLID, 1.0);
-
-
+		glUniform1f(iTempShaderVaribleGLID, m_currentFrame);
 
 	glDrawElements(GL_TRIANGLES, m_pModel->GetNumIndiceObject(), GL_UNSIGNED_INT, 0);
 
@@ -131,30 +108,20 @@ void Animation2D::Draw()
 	glBindTexture(GL_TEXTURE_2D, 0);
 
 }
-
 void Animation2D::Update(GLfloat deltatime)
 {
+	// Animation
 	m_currentTime += deltatime;
-	if (m_currentTime >= m_frameTime) {
-		u_currentFrame++;
-		if (u_currentFrame >= u_numFrames) {
-			u_currentFrame = 0;
-		}
+
+	if (m_currentTime >= m_frameTime)
+	{
+		m_currentFrame++;
+		if (m_currentFrame >= m_numFrames)
+			m_currentFrame = 0;
 		m_currentTime -= m_frameTime;
 	}
 }
 
-
-
-void Animation2D::SetText(std::string text)
-{
-	m_Text = text;
-}
-
-std::string Animation2D::GetText()
-{
-	return m_Text;
-}
 
 void Animation2D::Set2DPosition(GLfloat width, GLfloat height)
 {
@@ -183,6 +150,7 @@ Vector2 Animation2D::Get2DPosition()
 {
 	return m_Vec2DPos;
 }
+
 
 void Animation2D::SetSize(GLint width, GLint height)
 {
