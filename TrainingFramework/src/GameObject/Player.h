@@ -6,12 +6,11 @@ class Player : public Sprite2D
 public:
 	Player(std::shared_ptr<Models> model, std::shared_ptr<Shaders> shader, std::shared_ptr<Texture> texture);
 	~Player();
-	void	SetOnClick(void(*pBtClick)());
-	void	HandleKeyEvents(GLint x, GLint y, bool bIsPressed);
+	void	Display(int x, int y);
+	void	HandleKeyEvents(int key, bool bIsPressed);
 	bool	IsHandle();
-
+	void	Dash(GLfloat deltaTime);
 private:
-	void(*m_pBtClick)();
 	bool	m_isHandle;
 
 };

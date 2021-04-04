@@ -30,8 +30,20 @@ public:
 	void SetNewPostionForBullet();
 
 private:
-
+	int gravity;
+	int jumpHight;
+	int friction;
+	int pressTime;
+	bool isAlive;
+	bool isJump;
+	bool isDash;
+	bool isFire;
+	bool floor;
 	std::shared_ptr<Sprite2D> m_BackGround;
+	std::shared_ptr<Sprite2D> m_BackGround1;
+	std::shared_ptr<Sprite2D> m_Bullet;
+	std::shared_ptr<Animation2D> m_Player;
+	std::shared_ptr<Animation2D> m_Enemy;
 	std::shared_ptr<Text>  m_score;
 	std::list<std::shared_ptr<Animation2D>> m_Animation;
 };

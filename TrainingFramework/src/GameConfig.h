@@ -90,6 +90,9 @@
 #define KEY_MOVE_RIGHT			68	// key d
 #define KEY_MOVE_FORWORD		87	// key w
 #define KEY_MOVE_BACKWORD		83	// key s
+#define KEY_FIRE				67	// key c
+#define KEY_JUMP				88	// key x
+#define KEY_DASH				90	// key z
 
 #elif ANDROID
 
