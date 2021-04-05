@@ -6,8 +6,6 @@
     <ClCompile Include="src\esUtil_win.cpp" />
     <ClCompile Include="src\TGA.cpp" />
     <ClCompile Include="src\U_Math.cpp" />
-    <ClCompile Include="src\MemoryManager.cpp" />
-    <ClCompile Include="src\MemoryOperators.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\esUtil.h" />
@@ -16,7 +14,5 @@
     <ClInclude Include="src\TGA.h" />
     <ClInclude Include="src\utilities.h" />
     <ClInclude Include="src\U_Math.h" />
-    <ClInclude Include="src\MemoryManager.h" />
-    <ClInclude Include="src\MemoryOperators.h" />
   </ItemGroup>
 </Project>

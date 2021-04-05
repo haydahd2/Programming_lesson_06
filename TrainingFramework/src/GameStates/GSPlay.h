@@ -31,14 +31,18 @@ public:
 
 private:
 	int gravity;
-	int jumpHight;
+	int eGravity;
+	int pJump;
+	int eJump;
 	int friction;
 	int pressTime;
 	bool isAlive;
 	bool isJump;
+	bool eIsJump;
 	bool isDash;
 	bool isFire;
 	bool floor;
+	bool pDash;
 	std::shared_ptr<Sprite2D> m_BackGround;
 	std::shared_ptr<Sprite2D> m_BackGround1;
 	std::shared_ptr<Sprite2D> m_Bullet;

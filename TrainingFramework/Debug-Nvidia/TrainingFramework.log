@@ -1,13 +1,13 @@
 ﻿cl : Command line warning D9035: option 'Gm' has been deprecated and will be removed in a future release
   GSPlay.cpp
-d:\study\thuctap\programming_lesson_06\trainingframework\src\gamestates\gsplay.cpp(45): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
 d:\study\thuctap\programming_lesson_06\trainingframework\src\gamestates\gsplay.cpp(49): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
-d:\study\thuctap\programming_lesson_06\trainingframework\src\gamestates\gsplay.cpp(59): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
-d:\study\thuctap\programming_lesson_06\trainingframework\src\gamestates\gsplay.cpp(66): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
-d:\study\thuctap\programming_lesson_06\trainingframework\src\gamestates\gsplay.cpp(145): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
-d:\study\thuctap\programming_lesson_06\trainingframework\src\gamestates\gsplay.cpp(149): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+d:\study\thuctap\programming_lesson_06\trainingframework\src\gamestates\gsplay.cpp(53): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+d:\study\thuctap\programming_lesson_06\trainingframework\src\gamestates\gsplay.cpp(63): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+d:\study\thuctap\programming_lesson_06\trainingframework\src\gamestates\gsplay.cpp(70): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
 d:\study\thuctap\programming_lesson_06\trainingframework\src\gamestates\gsplay.cpp(153): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
 d:\study\thuctap\programming_lesson_06\trainingframework\src\gamestates\gsplay.cpp(157): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+d:\study\thuctap\programming_lesson_06\trainingframework\src\gamestates\gsplay.cpp(161): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+d:\study\thuctap\programming_lesson_06\trainingframework\src\gamestates\gsplay.cpp(165): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
 c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\memory(1801): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
   c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\memory(1866): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<std::shared_ptr<Models>&,std::shared_ptr<Shaders>&,std::shared_ptr<Texture>&,int&,double&>(std::shared_ptr<Models> &,std::shared_ptr<Shaders> &,std::shared_ptr<Texture> &,int &,double &)' being compiled
           with
@@ -19,7 +19,7 @@ c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.1
           [
               _Ty=Animation2D
           ]
-  d:\study\thuctap\programming_lesson_06\trainingframework\src\gamestates\gsplay.cpp(58): note: see reference to function template instantiation 'std::shared_ptr<Animation2D> std::make_shared<Animation2D,std::shared_ptr<Models>&,std::shared_ptr<Shaders>&,std::shared_ptr<Texture>&,int&,double&>(std::shared_ptr<Models> &,std::shared_ptr<Shaders> &,std::shared_ptr<Texture> &,int &,double &)' being compiled
+  d:\study\thuctap\programming_lesson_06\trainingframework\src\gamestates\gsplay.cpp(62): note: see reference to function template instantiation 'std::shared_ptr<Animation2D> std::make_shared<Animation2D,std::shared_ptr<Models>&,std::shared_ptr<Shaders>&,std::shared_ptr<Texture>&,int&,double&>(std::shared_ptr<Models> &,std::shared_ptr<Shaders> &,std::shared_ptr<Texture> &,int &,double &)' being compiled
 c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\memory(1801): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
 c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\memory(1801): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
           with
@@ -36,5 +36,5 @@ c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.1
           [
               _Ty=Text
           ]
-  d:\study\thuctap\programming_lesson_06\trainingframework\src\gamestates\gsplay.cpp(74): note: see reference to function template instantiation 'std::shared_ptr<Text> std::make_shared<Text,std::shared_ptr<Shaders>&,std::shared_ptr<Font>&,const char(&)[10],TEXT_COLOR,double>(std::shared_ptr<Shaders> &,std::shared_ptr<Font> &,const char (&)[10],TEXT_COLOR &&,double &&)' being compiled
+  d:\study\thuctap\programming_lesson_06\trainingframework\src\gamestates\gsplay.cpp(78): note: see reference to function template instantiation 'std::shared_ptr<Text> std::make_shared<Text,std::shared_ptr<Shaders>&,std::shared_ptr<Font>&,const char(&)[10],TEXT_COLOR,double>(std::shared_ptr<Shaders> &,std::shared_ptr<Font> &,const char (&)[10],TEXT_COLOR &&,double &&)' being compiled
   TrainingFramework.vcxproj -> D:\study\ThucTap\Programming_lesson_06\\BIN-Nvidia\TrainingFramework.exe

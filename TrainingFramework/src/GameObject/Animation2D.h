@@ -32,7 +32,7 @@ public:
 	Vector2		Get2DPosition();
 	void		SetSize(GLint width, GLint height);
 
-	void SetNumFrames(GLint numFrames);
-	void SetFrameTime(GLfloat frameTime);
+	void		SetNumFrames(GLint numFrames);
+	void		SetFrameTime(GLfloat frameTime);
 };
 

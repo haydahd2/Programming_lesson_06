@@ -16,14 +16,18 @@ extern int screenHeight; //need get on Graphic engine
 GSPlay::GSPlay()
 {
 	gravity = 0;
-	jumpHight = 800;
-	friction = 15;
+	eGravity = 0;
+	pJump = 800;
+	eJump = 800;
+	friction = 20;
 	pressTime = 0;
 	floor = true;
 	isAlive = true;
 	isDash = false;
 	isJump = false;
+	eIsJump = false;
 	isFire = false;
+	pDash = false;
 }
 
 
@@ -102,14 +106,18 @@ void GSPlay::HandleKeyEvents(int key, bool bIsPressed)
 	switch (key)
 	{
 	case KEY_DASH:
-		if (isDash = true)
-		{
+		if (isJump)
 			break;
-		}
+		else if (!floor)
+			break;
+		else if (pDash)
+			break;
 		else isDash = true;
 		break;
 	case KEY_JUMP:
 		if (!floor)
+			break;
+		else if (isDash)
 			break;
 		else isJump = true;
 		break;
@@ -162,22 +170,42 @@ void GSPlay::Update(float deltaTime)
 	{
 		if (isJump)
 		{
-			if (m_Player->Get2DPosition().y >= screenHeight / 2 - 100 && jumpHight >= 0)
+			if (m_Player->Get2DPosition().y >= screenHeight / 2 - 100 && pJump >= 0)
 			{
 				m_Player->SetTexture(ResourceManagers::GetInstance()->GetTexture("jump"));
-				m_Player->Set2DPosition(m_Player->Get2DPosition().x, m_Player->Get2DPosition().y - jumpHight * deltaTime);
-				jumpHight -= friction;
+				m_Player->Set2DPosition(m_Player->Get2DPosition().x, m_Player->Get2DPosition().y - pJump * deltaTime);
+				pJump -= friction;
 			}
 			else
 			{
-				jumpHight = 800;
+				pJump = 800;
 				isJump = false;
 				floor = false;
 			}
 		}
 		if (isDash)
 		{
-
+			if (m_Player->Get2DPosition().x < screenWidth / 2 - 250 && !pDash)
+			{
+				m_Player->SetNumFrames(1);
+				m_Player->SetTexture(ResourceManagers::GetInstance()->GetTexture("dash"));
+				m_Player->Set2DPosition(m_Player->Get2DPosition().x + 400 * deltaTime, m_Player->Get2DPosition().y);
+			}
+			else
+			{
+				pDash = true;
+			}
+			if (m_Player->Get2DPosition().x <= screenWidth / 2 - 470)
+			{
+				isDash = false;
+				pDash = false;
+			}
+			if(pDash)
+			{
+				m_Player->SetNumFrames(3);
+				m_Player->SetTexture(ResourceManagers::GetInstance()->GetTexture("run"));
+				m_Player->Set2DPosition(m_Player->Get2DPosition().x - 200 * deltaTime, m_Player->Get2DPosition().y);
+			}
 		}
 		if (isFire)
 		{
@@ -188,7 +216,7 @@ void GSPlay::Update(float deltaTime)
 		}
 
 	}
-	//Enemy
+//ENEMY------------------------------------------------------------------------------------------------------------------------
 	if (m_Enemy->Get2DPosition().x <= -screenWidth)
 	{
 		m_Enemy->Set2DPosition(m_Enemy->Get2DPosition().x + screenWidth * 2, m_Enemy->Get2DPosition().y);
@@ -197,7 +225,41 @@ void GSPlay::Update(float deltaTime)
 	{
 		m_Enemy->Set2DPosition(m_Enemy->Get2DPosition().x - 200 * deltaTime, m_Enemy->Get2DPosition().y);
 	}
-
+	//Enemy jump
+	if (!eIsJump)
+	{
+		if (eJump >= 0)
+		{
+			m_Enemy->Set2DPosition(m_Enemy->Get2DPosition().x, m_Enemy->Get2DPosition().y - eJump * deltaTime);
+			eJump -= friction;
+		}
+		else
+		{
+			eIsJump = true;
+		}
+	}
+	else
+	{
+		if (m_Enemy->Get2DPosition().y >= screenHeight / 2 + 210)
+		{
+			eGravity = 0;
+			eJump = 800;
+			eIsJump = false;
+		}
+		else
+		{
+			m_Enemy->Set2DPosition(m_Enemy->Get2DPosition().x, m_Enemy->Get2DPosition().y + eGravity * deltaTime);
+			eGravity += friction;
+		}
+	}
+	if(m_Enemy)
+	//Contact
+	if (m_Enemy->Get2DPosition().x == m_Player->Get2DPosition().x && m_Enemy->Get2DPosition().y == m_Player->Get2DPosition().y)
+	{
+		m_Player->SetNumFrames(4);
+		m_Player->SetTexture(ResourceManagers::GetInstance()->GetTexture("dead"));
+		//GameStateMachine::GetInstance()->ChangeState(StateTypes::STATE_Menu);
+	}
 
 	m_Enemy->Update(deltaTime);
 	m_Player->Update(deltaTime);
