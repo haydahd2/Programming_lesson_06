@@ -30,12 +30,8 @@ public:
 	void SetNewPostionForBullet();
 
 private:
-	int gravity;
-	int eGravity;
-	int pJump;
-	int eJump;
-	int friction;
-	int pressTime;
+	float TimeCount, distX, distY, dist, distX2, distY2, dist2;
+	int gravity, eGravity, pJump, eJump, friction, pressTime;
 	bool isAlive;
 	bool isJump;
 	bool eIsJump;
@@ -43,9 +39,11 @@ private:
 	bool isFire;
 	bool floor;
 	bool pDash;
+	bool createBullet;
+	bool getHit;
 	std::shared_ptr<Sprite2D> m_BackGround;
 	std::shared_ptr<Sprite2D> m_BackGround1;
-	std::shared_ptr<Sprite2D> m_Bullet;
+	std::shared_ptr<Sprite2D> Bullet;
 	std::shared_ptr<Animation2D> m_Player;
 	std::shared_ptr<Animation2D> m_Enemy;
 	std::shared_ptr<Text>  m_score;

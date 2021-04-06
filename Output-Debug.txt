@@ -1,0 +1,156 @@
+﻿'TrainingFramework.exe' (Win32): Loaded 'D:\study\ThucTap\Programming_lesson_06\BIN-Nvidia\TrainingFramework.exe'. Symbols loaded.
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\ntdll.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\kernel32.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\KernelBase.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\ucrtbase.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\user32.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\win32u.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\gdi32.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\gdi32full.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\msvcp_win.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'D:\study\ThucTap\Programming_lesson_06\BIN-Nvidia\libEGL.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'D:\study\ThucTap\Programming_lesson_06\BIN-Nvidia\libGLESv2.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\msvcp140.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\vcruntime140.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\d3d9.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\msvcrt.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\sechost.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\rpcrt4.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\combase.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\kernel.appcore.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\dwmapi.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\windows.storage.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\wldp.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\advapi32.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\imm32.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\uxtheme.dll'. 
+The thread 0x13c0 has exited with code 0 (0x0).
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\msctf.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\oleaut32.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\bcryptprimitives.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\TextInputFramework.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\CoreMessaging.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\CoreUIComponents.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\ws2_32.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\SHCore.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\ntmarta.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\WinTypes.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\WinTypes.dll'. 
+'TrainingFramework.exe' (Win32): Unloaded 'C:\Windows\SysWOW64\WinTypes.dll'
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\WinTypes.dll'. 
+'TrainingFramework.exe' (Win32): Unloaded 'C:\Windows\SysWOW64\WinTypes.dll'
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\dxgi.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\d3d11.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\dcomp.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\DXGIDebug.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\ResourcePolicyClient.dll'. 
+'TrainingFramework.exe' (Win32): Unloaded 'C:\Windows\SysWOW64\ResourcePolicyClient.dll'
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\System32\DriverStore\FileRepository\ki134903.inf_amd64_2480319490c96793\igd10iumd32.dll'. 
+'TrainingFramework.exe' (Win32): Unloaded 'C:\Windows\System32\DriverStore\FileRepository\ki134903.inf_amd64_2480319490c96793\igd10iumd32.dll'
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\System32\DriverStore\FileRepository\ki134903.inf_amd64_2480319490c96793\igd10iumd32.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\ole32.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\bcrypt.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\shlwapi.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\ncrypt.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\ntasn1.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\System32\DriverStore\FileRepository\ki134903.inf_amd64_2480319490c96793\igdgmm32.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\d3d11_3SDKLayers.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\System32\DriverStore\FileRepository\ki134903.inf_amd64_2480319490c96793\igc32.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\shell32.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\DXCore.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\cfgmgr32.dll'. 
+DXGI WARNING: IDXGIFactory::CreateSwapChain: Blt-model swap effects (DXGI_SWAP_EFFECT_DISCARD and DXGI_SWAP_EFFECT_SEQUENTIAL) are legacy swap effects that are predominantly superceded by their flip-model counterparts (DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL and DXGI_SWAP_EFFECT_FLIP_DISCARD). Please consider updating your application to leverage flip-model swap effects to benefit from modern presentation enhancements. More information is available at http://aka.ms/dxgiflipmodel. [ MISCELLANEOUS WARNING #294: ]
+DXGI ERROR: IDXGISwapChain2::GetFrameLatencyWaitableObject: Can only be called for SwapChains with the DXGI_SWAP_CHAIN_FLAG_FRAME_LATENCY_WAITABLE_OBJECT flag. [ MISCELLANEOUS ERROR #214: ]
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\D3DCompiler_47.dll'. 
+'TrainingFramework.exe' (Win32): Loaded 'C:\Windows\SysWOW64\cryptsp.dll'. 
+The thread 0x4a68 has exited with code 0 (0x0).
+The thread 0x4a94 has exited with code 0 (0x0).
+The thread 0xd18 has exited with code 0 (0x0).
+The thread 0x4a28 has exited with code 0 (0x0).
+The thread 0x21ac has exited with code 0 (0x0).
+The thread 0x4b38 has exited with code 0 (0x0).
+D3D11 WARNING: Process is terminating. Using simple reporting. Please call ReportLiveObjects() at runtime for standard reporting. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: Live Producer at 0x00B9C5CC, Refcount: 68. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x00BA5AF8, Refcount: 2. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x064CB0B0, Refcount: 0. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x00C1AADC, Refcount: 0. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x00C0FB2C, Refcount: 0. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x064CDF54, Refcount: 0. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x064CE10C, Refcount: 0. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x064D554C, Refcount: 0. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x064D6D1C, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x064D773C, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x064D7FC4, Refcount: 3. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x064EF470, Refcount: 3. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x064EFF0C, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x064F0CAC, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x064F0F6C, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x064F11F4, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x064F1CEC, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x064F1FAC, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x064F2A3C, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x065035DC, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06503824, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x0652008C, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x0656D07C, Refcount: 0. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06AF0E2C, Refcount: 0. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06AF1AB4, Refcount: 0. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06563CCC, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06AF8BBC, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06AF8D44, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06B09CB4, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06B0A1B4, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06B0AC2C, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x0655ED7C, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06AF5E1C, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06AF6CBC, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06AF740C, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06AF8774, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06B2A6BC, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06B2A884, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06B2AD84, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06B2B59C, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06B2F1A4, Refcount: 0. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06B87DEC, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06B8EC4C, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06BDE444, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06B78DD4, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06538C4C, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06B7909C, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06B7E124, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06B77794, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06B7EFBC, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06B80F14, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06B7D87C, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06B605FC, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06B7962C, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06538ED4, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x00C27EAC, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06C0ECBC, Refcount: 0. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06BDCE5C, Refcount: 0. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06B93B5C, Refcount: 0. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06B2EEDC, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06C10CF4, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06B798F4, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06C102D4, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06B77A5C, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06C11204, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06B79BBC, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06C0FB3C, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06B2E684, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06B6343C, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06B7A414, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06B65014, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06B2D89C, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06B63E5C, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06B2E94C, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06B6394C, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06B77FEC, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06B65524, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06B774CC, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: 	Live Object at 0x06B64D8C, Refcount: 1. [ STATE_CREATION WARNING #0: UNKNOWN]
+D3D11 WARNING: Live                         Object :     78 [ STATE_CREATION WARNING #0: UNKNOWN]
+DXGI WARNING: Live Producer at 0x00B8E348, Refcount: 5. [ STATE_CREATION WARNING #0: ]
+DXGI WARNING: 	Live Object at 0x00B90728, Refcount: 3. [ STATE_CREATION WARNING #0: ]
+DXGI WARNING: Live                         Object :      1 [ STATE_CREATION WARNING #0: ]
+The program '[13168] TrainingFramework.exe' has exited with code 0 (0x0).

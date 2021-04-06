@@ -15,6 +15,7 @@ extern int screenHeight; //need get on Graphic engine
 
 GSPlay::GSPlay()
 {
+	TimeCount = 0;
 	gravity = 0;
 	eGravity = 0;
 	pJump = 800;
@@ -28,6 +29,8 @@ GSPlay::GSPlay()
 	eIsJump = false;
 	isFire = false;
 	pDash = false;
+	createBullet = false;
+	getHit = false;
 }
 
 
@@ -53,7 +56,6 @@ void GSPlay::Init()
 	m_BackGround1->Set2DPosition(screenWidth / 2 + screenWidth, screenHeight / 2);
 	m_BackGround1->SetSize(screenWidth, screenHeight);
 
-	//bullet
 
 	//Player
 	auto numFrames = 3;
@@ -70,7 +72,11 @@ void GSPlay::Init()
 	m_Enemy->Set2DPosition(screenWidth, screenHeight / 2 + 210);
 	m_Enemy->SetSize(80, 120);
 
-	
+	//Bullet
+	texture = ResourceManagers::GetInstance()->GetTexture("bullet-blank");
+	Bullet = std::make_shared<Sprite2D>(model, shader, texture);
+	Bullet->Set2DPosition(screenWidth, screenHeight);
+	Bullet->SetSize(30, 30);
 
 	//text game title
 	shader = ResourceManagers::GetInstance()->GetShader("TextShader");
@@ -123,6 +129,7 @@ void GSPlay::HandleKeyEvents(int key, bool bIsPressed)
 		break;
 	case KEY_FIRE:
 		isFire = true;
+		break;
 	default:
 		break;
 	}
@@ -148,21 +155,24 @@ void GSPlay::Update(float deltaTime)
 	}
 
 	//set background
-	if (m_BackGround->Get2DPosition().x <= -screenWidth / 2)
+	if (isAlive)
 	{
-		m_BackGround->Set2DPosition(m_BackGround->Get2DPosition().x + screenWidth * 2 - 5, screenHeight / 2);
-	}
-	else 
-	{
-		m_BackGround->Set2DPosition(m_BackGround->Get2DPosition().x - 100 * deltaTime, screenHeight / 2);
-	}
-	if (m_BackGround1->Get2DPosition().x <= -screenWidth / 2)
-	{
-		m_BackGround1->Set2DPosition(m_BackGround1->Get2DPosition().x + screenWidth * 2 - 5, screenHeight / 2);
-	}
-	else
-	{
-		m_BackGround1->Set2DPosition(m_BackGround1->Get2DPosition().x - 100 * deltaTime, screenHeight / 2);
+		if (m_BackGround->Get2DPosition().x <= -screenWidth / 2)
+		{
+			m_BackGround->Set2DPosition(m_BackGround->Get2DPosition().x + screenWidth * 2 - 5, screenHeight / 2);
+		}
+		else
+		{
+			m_BackGround->Set2DPosition(m_BackGround->Get2DPosition().x - 100 * deltaTime, screenHeight / 2);
+		}
+		if (m_BackGround1->Get2DPosition().x <= -screenWidth / 2)
+		{
+			m_BackGround1->Set2DPosition(m_BackGround1->Get2DPosition().x + screenWidth * 2 - 5, screenHeight / 2);
+		}
+		else
+		{
+			m_BackGround1->Set2DPosition(m_BackGround1->Get2DPosition().x - 100 * deltaTime, screenHeight / 2);
+		}
 	}
 
 	//set action
@@ -185,11 +195,12 @@ void GSPlay::Update(float deltaTime)
 		}
 		if (isDash)
 		{
-			if (m_Player->Get2DPosition().x < screenWidth / 2 - 250 && !pDash)
+			if (m_Player->Get2DPosition().x < screenWidth / 2 - 200 && !pDash)
 			{
 				m_Player->SetNumFrames(1);
 				m_Player->SetTexture(ResourceManagers::GetInstance()->GetTexture("dash"));
-				m_Player->Set2DPosition(m_Player->Get2DPosition().x + 400 * deltaTime, m_Player->Get2DPosition().y);
+				m_Player->SetSize(100, 70);
+				m_Player->Set2DPosition(m_Player->Get2DPosition().x + 500 * deltaTime, m_Player->Get2DPosition().y);
 			}
 			else
 			{
@@ -204,22 +215,36 @@ void GSPlay::Update(float deltaTime)
 			{
 				m_Player->SetNumFrames(3);
 				m_Player->SetTexture(ResourceManagers::GetInstance()->GetTexture("run"));
+				m_Player->SetSize(100, 100);
 				m_Player->Set2DPosition(m_Player->Get2DPosition().x - 200 * deltaTime, m_Player->Get2DPosition().y);
 			}
 		}
 		if (isFire)
 		{
-			isFire = false;
-		}
-		else
-		{
+			if (createBullet = false)
+			{
+				Bullet->Set2DPosition(m_Player->Get2DPosition().x, m_Player->Get2DPosition().y);
+				createBullet = true;
+			}
+			if(createBullet = true)
+			{
+				Bullet->SetTexture(ResourceManagers::GetInstance()->GetTexture("bullet"));
+				Bullet->Set2DPosition(Bullet->Get2DPosition().x + 1200 * deltaTime, Bullet->Get2DPosition().y);
+				if (Bullet->Get2DPosition().x >= screenWidth - 300)
+				{
+					Bullet->Set2DPosition(m_Player->Get2DPosition().x, m_Player->Get2DPosition().y);
+					Bullet->SetTexture(ResourceManagers::GetInstance()->GetTexture("bullet-blank"));
+					isFire = false;
+					createBullet = false;
+				}
+			}
 		}
 
 	}
 //ENEMY------------------------------------------------------------------------------------------------------------------------
-	if (m_Enemy->Get2DPosition().x <= -screenWidth)
+	if (m_Enemy->Get2DPosition().x <= - 100)
 	{
-		m_Enemy->Set2DPosition(m_Enemy->Get2DPosition().x + screenWidth * 2, m_Enemy->Get2DPosition().y);
+		m_Enemy->Set2DPosition(m_Enemy->Get2DPosition().x + screenWidth, m_Enemy->Get2DPosition().y);
 	}
 	else
 	{
@@ -252,17 +277,40 @@ void GSPlay::Update(float deltaTime)
 			eGravity += friction;
 		}
 	}
-	if(m_Enemy)
+
 	//Contact
-	if (m_Enemy->Get2DPosition().x == m_Player->Get2DPosition().x && m_Enemy->Get2DPosition().y == m_Player->Get2DPosition().y)
+	distX = m_Player->Get2DPosition().y - m_Enemy->Get2DPosition().y;
+	distY = m_Player->Get2DPosition().x - m_Enemy->Get2DPosition().x;
+	dist = abs(sqrt(distX * distX + distY * distY));
+	if (dist <= 120)
+	{
+		isAlive = false;
+	}
+	if (!isAlive)
 	{
 		m_Player->SetNumFrames(4);
 		m_Player->SetTexture(ResourceManagers::GetInstance()->GetTexture("dead"));
-		//GameStateMachine::GetInstance()->ChangeState(StateTypes::STATE_Menu);
+		TimeCount += deltaTime;
+		if (TimeCount >= 0.8f)
+			GameStateMachine::GetInstance()->PopState();
 	}
-
 	m_Enemy->Update(deltaTime);
 	m_Player->Update(deltaTime);
+
+	//Bullet hit
+	distX2 = Bullet->Get2DPosition().y - m_Enemy->Get2DPosition().y;
+	distY2 = Bullet->Get2DPosition().x - m_Enemy->Get2DPosition().x;
+	dist2 = abs(sqrt(distX2 * distX2 + distY2 * distY2));
+	if (dist2 <= 50)
+	{
+		getHit = true;
+	}
+	if (getHit)
+	{
+		Bullet->SetTexture(ResourceManagers::GetInstance()->GetTexture("bullet-blank"));
+		m_Enemy->Set2DPosition(screenWidth + 100, m_Enemy->Get2DPosition().y);
+		getHit = false;
+	}
 }
 
 void GSPlay::Draw()
@@ -272,6 +320,7 @@ void GSPlay::Draw()
 	m_score->Draw();
 	m_Player->Draw();
 	m_Enemy->Draw();
+	Bullet->Draw();
 }
 
 void GSPlay::SetNewPostionForBullet()

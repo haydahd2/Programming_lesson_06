@@ -1,0 +1,9 @@
+D:/study/ThucTap/Programming_lesson_06/freetype/out/build/x64-Debug/CMakeFiles/package.dir
+D:/study/ThucTap/Programming_lesson_06/freetype/out/build/x64-Debug/CMakeFiles/freetype.dir
+D:/study/ThucTap/Programming_lesson_06/freetype/out/build/x64-Debug/CMakeFiles/package_source.dir
+D:/study/ThucTap/Programming_lesson_06/freetype/out/build/x64-Debug/CMakeFiles/dist.dir
+D:/study/ThucTap/Programming_lesson_06/freetype/out/build/x64-Debug/CMakeFiles/install/local.dir
+D:/study/ThucTap/Programming_lesson_06/freetype/out/build/x64-Debug/CMakeFiles/install.dir
+D:/study/ThucTap/Programming_lesson_06/freetype/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+D:/study/ThucTap/Programming_lesson_06/freetype/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
+D:/study/ThucTap/Programming_lesson_06/freetype/out/build/x64-Debug/CMakeFiles/list_install_components.dir
