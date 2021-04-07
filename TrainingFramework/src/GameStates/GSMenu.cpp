@@ -52,6 +52,8 @@ void GSMenu::Init()
 	std::shared_ptr<Font> font = ResourceManagers::GetInstance()->GetFont("times");
 	m_Text_gameName = std::make_shared< Text>(shader, font, "MEGAMAN RUN", TEXT_COLOR::GREEN, 2.0);
 	m_Text_gameName->Set2DPosition(Vector2(screenWidth / 2 - 170, 120));
+
+	ResourceManagers::GetInstance()->PlaySound("Main_Menu");
 }
 
 void GSMenu::Exit()
